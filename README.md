@@ -82,4 +82,87 @@ Total Rides per Day -  calculated the total rides for members and casual separat
 
 Total Rides per Bike Type - calculated the total rides for members and casual separated by Bike type; used stacked column chart 
 
+#R 
+I originally wanted to use SQL but the files were too big to upload and I couldn't figure out how to utilize Google Cloud Platform. Instead I used R to analyze the data because it could handle all of the information quicker than Excel, and I wanted to work on my R skills. Below is my general process in R, I didn't include my mistakes/missteps or errors for the sake of brevity.
+
+
+View my full code on my Github for this capstone project here. 
+
+Load all of the libraries I used: tidyverse, lubridate, hms, data.table 
+
+Uploaded all of the original data from the data source divytrip into R using read_csv function to upload all individual csv files and save them in separate data frames. For august 2020 data I saved it into aug08_df, september 2020 to sep09_df and so on. 
+
+Merged the 12 months of data together using rbind to create a one year view
+
+Created a new data frame called cyclistic_date that would contain all of my new columns 
+
+Created new columns for:
+
+Ride Length - did this by subtracting end_at time from start_at time
+
+Day of the Week 
+
+Month 
+
+Day 
+
+Year
+
+Time - convert the time to HH:MM:SS format
+
+Hour 
+
+Season - Spring, Summer, Winter or Fall
+
+Time of Day - Night, Morning, Afternoon or Evening
+
+Cleaned the data by:
+
+Removing duplicate rows
+
+Remove rows with NA values (blank rows)
+
+Remove where ride_length is 0 or negative (ride_length should be a positive number)
+
+Remove unnecessary columns: ride_id, start_station_id, end_station_id, start_lat, start_long, end_lat, end_lng
+
+Calculated Total Rides for:
+
+Total number of rides which was just the row count = 4,152,139
+
+Member type - casual riders vs. annual members 
+
+Type of Bike - classic vs docked vs electric; separated by member type and total rides for each bike type
+
+Hour - separated by member type and total rides for each hour in a day
+
+Time of Day - separated by member type and total rides for each time of day (morning, afternoon, evening, night)
+
+Day of the Week - separated by member type and total rides for each day of the week
+
+Day of the Month - separated by member type and total rides for each day of the month
+
+Month - separated by member type and total rides for each month
+
+Season - separated by member type and total rides for each season (spring,  summer, fall, winter)
+
+Calculated Average Ride Length for:
+
+Total average ride length
+
+Member type - casual riders vs. annual members 
+
+Type of Bike - separated by member type and average ride length for each bike type
+
+Hour - separated by member type and average ride length for each hour in a day
+
+Time of Day - separated by member type and average ride length for each time of day (morning, afternoon, evening, night)
+
+Day of the Week - separated by member type and average ride length for each day of the week
+
+Day of the Month - separated by member type and average ride length for each day of the month
+
+Month - separated by member type and average ride length for each month
+
+Season - separated by member type and average ride lengths for each season (spring,  summer, fall, winter)
 
