@@ -29,7 +29,7 @@ Overview: I first analyzed the data separately (each month) in Excel, then used 
 #Microsoft Excel
 I initially wanted to gather and analyze my data in Excel because it was the tool I was most familiar with and I could get a general understanding of the data quicker. I did not combine all of the spreadsheets into one because that would've taken more processing power than my computer had. 
 
-I began downloading the data from [divvy-tripdata], and turning the .csv files into excel spreadsheets. I downloaded the most recent year of data which was at the time of starting my project: 
+I began downloading the data from [divvy-tripdata](https://www.google.com) , and turning the .csv files into excel spreadsheets. I downloaded the most recent year of data which was at the time of starting my project: 
 
 September 2023
 
