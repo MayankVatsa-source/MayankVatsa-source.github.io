@@ -71,7 +71,7 @@ View my full code on my Github for this capstone project attached.
 
 Load all of the libraries I used: tidyverse, lubridate, hms, data.table 
 
-Uploaded all of the original data from the data source [divytrip] into R using read_csv function to upload all individual csv files and save them in separate data frames. 
+Uploaded all of the original data from the data source [divytrip](https://www.google.com)  into R using read_csv function to upload all individual csv files and save them in separate data frames. 
 
 Merged the 12 months of data together using rbind to create a one year view
 
