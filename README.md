@@ -23,11 +23,11 @@ Below I will describe step-by-step the process I used to for this project.
 
 
 
-PROCESS:
+#PROCESS:
 Overview: I first analyzed the data separately (each month) in Excel, then used R to analyze the data as a whole (one year). Finally I created a dashboard in Tableau and used Figma to support the design elements. 
 
 
-Microsoft Excel
+#Microsoft Excel
 I initially wanted to gather and analyze my data in Excel because it was the tool I was most familiar with and I could get a general understanding of the data quicker. I did not combine all of the spreadsheets into one because that would've taken more processing power than my computer had. 
 
 I began downloading the data from divvy-tripdata, and turning the .csv files into excel spreadsheets. I downloaded the most recent year of data which was at the time of starting my project: 
@@ -82,4 +82,4 @@ Total Rides per Day -  calculated the total rides for members and casual separat
 
 Total Rides per Bike Type - calculated the total rides for members and casual separated by Bike type; used stacked column chart 
 
-I also created a Google docs Notes list where I wrote down the exact steps for each month (had a checklist) and included my insights for each month
+
