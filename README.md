@@ -169,9 +169,17 @@ Season - separated by member type and average ride lengths for each season (spri
 #Tableau 
 While I learned the basics of Tableau in the Google Course I wanted more practice with visualizing data
 
+
+
+![image](https://github.com/user-attachments/assets/3c87c69a-c62e-40ee-8c03-ce29e3ce0b45)
+
+
+
+
+
 # Creating Dashboard
 
 With the help of Microsoft Excel and Tableau I created a Dashboard whose details are attached as Dashboard details
 
-
+ 
 
