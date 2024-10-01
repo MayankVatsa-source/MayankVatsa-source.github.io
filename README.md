@@ -1,6 +1,7 @@
 # capstone-cyclistic-project
 This is my first respository
 I am an Engineer and have done MBA also.I have basic knowledge of C,Python and R Programming.
+
 Author - Mayank Vatsa
 
 I used Cyclistic’s historical trip data to analyze and identify trends by downloaded  the previous 12 months(September 2023 to August 2024) of Cyclistic trip data [here](https://divvy-tripdata.s3.amazonaws.com/index.html). (Note: The datasets have a different name because Cyclistic is a fictional company. For the purposes of this case study, the datasets are appropriate and will enable you to answer the business questions. The data has been made available by Motivate International Inc. under this license.) This is public data that you can use to explore how different customer types are using Cyclistic bikes. But note that data-privacy issuesprohibit you from using riders’ personally identifiable information. This means that you won’t beable to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.
