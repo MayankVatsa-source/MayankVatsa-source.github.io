@@ -7,7 +7,9 @@ I am an Engineer and have done MBA also.I have basic knowledge of Python and R P
 
 
 
-I used Cyclistic’s historical trip data to analyze and identify trends by downloading the previous 12 months(September 2023 to August 2024) of Cyclistic trip data [here](https://divvy-tripdata.s3.amazonaws.com/index.html). (Note: The datasets have a different name because Cyclistic is a fictional company. For the purposes of this case study, the datasets are appropriate and will enable you to answer the business questions. The data has been made available by Motivate International Inc. under this license.) This is public data that can be used to explore how different customer types are using Cyclistic bikes. 
+I used Cyclistic’s historical trip data to analyze and identify trends by downloading the previous 12 months(September 2023 to August 2024) of Cyclistic trip data [here](https://divvy-tripdata.s3.amazonaws.com/index.html).  This is public data that can be used to explore how different customer types are using Cyclistic bikes. 
+
+##Brief introduction of the company
 
 Cyclistic is a fictional bike sharing program which features more than 5,800 bikes and 600 docking stations. It offers reclining bikes, hand tricycles, and cargo bikes, making it more inclusive to people with disabilities and riders who can't use a standard two-wheeled bike. It was founded in 2016 and has grown tremendously into a fleet of bicycles that are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and returned to any other station in the system anytime.
 Previously, Cyclistic's marketing strategy tried to build the general awareness and appeal to broad consumers. It has flexible pricing plans: single-ride passes, full-day passes, and annual memberships. Those who purchase single-ride or full-day passes are referred to as casual riders while those who purchase annual memberships are Cyclistic members. 
@@ -15,10 +17,10 @@ Previously, Cyclistic's marketing strategy tried to build the general awareness 
 #My Role: In this scenario I am a junior data analyst at Cyclistic and my team has been tasked with the overall goal of designing marketing strategies 
 
 
-#Overall Goal: Design marketing strategies aimed at converting casual riders into annual members.
+#Overall Goal: Design marketing strategies aimed at converting casual riders into annual members. That is the data analysis in this project shuold be confined to [conversion of casual members to members]
 
 
-#Business Question: "How do annual members and casual riders use Cyclistic bikes differently?"
+#Business Question: "Based on data such as numbers of riders, preffered bike type, preffered season, ride length, etc. how do members and casual riders use Cyclistic bikes? Secondly what steps the compnay should take to convert the casual riders to annual members?"
 
 
 Below I will describe step-by-step the process I used to for this project. 
@@ -26,57 +28,31 @@ Below I will describe step-by-step the process I used to for this project.
 
 
 #PROCESS:
-Overview: I first analyzed the data separately (each month) in Excel, then used R to analyze the data as a whole (one year). Finally I created a dashboard to support design elements.
+[Overview]: I first analyzed the data separately (each month) in Excel, then used R to analyze the data as a whole (one year). Finally I created a dashboard to support design elements.
 
+I initially wanted to gather and analyze my data in [Excel] because it was the tool I was most familiar with and I could get a general understanding of the data quicker. But due to limitaions in excel spreadsheet, combining the 12 moths data(which sums about 5 million) was not possible. As such I went for [R Studio] where using [rbind] function the data of all 12 files were combined.
+However besides RStudio and Tableau, Excel was used for generating pivot table and other charts for analysis.
 
-#Microsoft Excel
-I initially wanted to gather and analyze my data in Excel because it was the tool I was most familiar with and I could get a general understanding of the data quicker. I did not combine all of the spreadsheets into one because that would've taken more processing power than my computer had. 
+#STEPS TAKEN:
+I downloaded 12 months data from [divvy-tripdata](https://www.google.com) , and converted the .csv files into excel spreadsheets. However data in both csv and excel were kept for analysis purpose. The data was downloded from September 2023 to August 2024. 
 
-I began downloading the data from [divvy-tripdata](https://www.google.com) , and turning the .csv files into excel spreadsheets. I downloaded the most recent year of data which was at the time of starting my project: 
+Added two columns namely ride_length and day_of_week to all of the months:
 
-September 2023
-
-October 2023
-
-November 2023
-
-December 2023
-
-January 2024
-
-February 2024
-
-March 2024
-
-April 2024
-
-May 2024
-
-June 2024
-
-July 2024
-
-August 2024
-
-Added two columns to all of the months:
-
-ride_length calculated the total ride length for each trip using the start_at column which was: ending time minus starting time. 
-
-day_of_week calculated the day of the week for each trip using the start_at column date. 
+ride_length:
+Calculated the total ride length for each trip subtracting end_at and  start_at column.
+day_of_week:
+Calculated the day of the week for each trip using [weekday] function in start_at column. 
 
 For every month in Excel created pivot tables and charts to go with the analysis.
 
 #R 
-I originally wanted to use SQL but the files were too big to upload and I couldn't figure out how to utilize Google Cloud Platform. Instead I used R to analyze the data because it could handle all of the information quicker than Excel, and I wanted to work on my R skills. Below is my general process in R:
+I tried to use SQL and Bigquery for preparing data for analysis, but I was comfortable with R programming. Below is my general process in R. My full code can be viewed in my [Github profile].
 
-
-View my full code on my Github for this capstone project attached. 
-
-Load all of the libraries I used: tidyverse, lubridate, hms, data.table 
+Libraries used in R: tidyverse, lubridate, hms, data.table 
 
 Uploaded all of the original data from the data source [divytrip](https://www.google.com)  into R using read_csv function to upload all individual csv files and save them in separate data frames. 
 
-Merged the 12 months of data together using rbind to create a one year view
+Merged the 12 months of data together using rbind to create a one year view.
 
 Created a new data frame called cyclistic_date that would contain all of my new columns 
 
@@ -100,15 +76,9 @@ Season - Spring, Summer, Winter or Fall
 
 Time of Day - Night, Morning, Afternoon or Evening
 
-Cleaned the data by:
-
-Removing duplicate rows
-
-Remove rows with NA values (blank rows)
-
-Remove where ride_length is 0 or negative (ride_length should be a positive number)
-
-Remove unnecessary columns: ride_id, start_station_id, end_station_id, start_lat, start_long, end_lat, end_lng
+##Cleaning of data:removed duplicate rows, removed rows with NA values (blank rows),
+removed where ride_length is 0 or negative (ride_length should be a positive number),
+remove unnecessary columns  namely ride_id, start_station_id, end_station_id, start_lat, start_long, end_lat, end_lng.
 
 Calculated Total Rides for:
 
