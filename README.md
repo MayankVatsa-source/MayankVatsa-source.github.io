@@ -20,3 +20,66 @@ Business Question: "How do annual members and casual riders use Cyclistic bikes 
 
 
 Below I will describe step-by-step the process I used to for this project. 
+
+
+
+PROCESS:
+Overview: I first analyzed the data separately (each month) in Excel, then used R to analyze the data as a whole (one year). Finally I created a dashboard in Tableau and used Figma to support the design elements. 
+
+
+Microsoft Excel
+I initially wanted to gather and analyze my data in Excel because it was the tool I was most familiar with and I could get a general understanding of the data quicker. I did not combine all of the spreadsheets into one because that would've taken more processing power than my computer had. 
+
+I began downloading the data from divvy-tripdata, and turning the .csv files into excel spreadsheets. I downloaded the most recent year of data which was at the time of starting my project: 
+
+September 2023
+
+October 2023
+
+November 2023
+
+December 2023
+
+January 2024
+
+February 2024
+
+March 2024
+
+April 2024
+
+May 2024
+
+June 2024
+
+July 2024
+
+August 2024
+
+Added two columns to all of the months:
+
+ride_length calculated the total ride length for each trip using the start_at column which was: ending time minus starting time. 
+
+day_of_week calculated the day of the week for each trip using the start_at column date. 
+
+Went over the business task and the information I had at hand and how that could be used to figure out how members and casual riders use the bike service differently
+
+Came up with metrics to look at such as : 
+
+total number of rides per hour, per day of the month, per season, per day of the week, and for different bike types 
+
+Average ride length between members and casual
+
+For every month in Excel created pivot tables and charts to go with the analysis on (this took the longest):
+
+Total Rides per Weekday - calculated the total rides for members and casual and separated it by day of the week; used a cluster column chart
+
+Average Ride Length - calculated the average ride length for members and casual and separated it by day of the week; used a cluster column chart
+
+Total Rides per Hour -  calculated the total rides for members and casual separated by the time of the day (24hr); used a line comparison chart 
+
+Total Rides per Day -  calculated the total rides for members and casual separated by the day of the month; used a line comparison chart 
+
+Total Rides per Bike Type - calculated the total rides for members and casual separated by Bike type; used stacked column chart 
+
+I also created a Google docs Notes list where I wrote down the exact steps for each month (had a checklist) and included my insights for each month
