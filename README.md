@@ -166,3 +166,12 @@ Month - separated by member type and average ride length for each month
 
 Season - separated by member type and average ride lengths for each season (spring,  summer, fall, winter)
 
+#Tableau 
+While I learned the basics of Tableau in the Google Course I wanted more practice with visualizing data
+
+# Creating Dashboard
+
+With the help of Microsoft Excel and Tableau I created a Dashboard whose details are attached as Dashboard details
+
+
+
