@@ -14,26 +14,26 @@ I used Cyclistic’s historical trip data to analyze and identify trends by down
 Cyclistic is a fictional bike sharing program which features more than 5,800 bikes and 600 docking stations. It offers reclining bikes, hand tricycles, and cargo bikes, making it more inclusive to people with disabilities and riders who can't use a standard two-wheeled bike. It was founded in 2016 and has grown tremendously into a fleet of bicycles that are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and returned to any other station in the system anytime.
 Previously, Cyclistic's marketing strategy tried to build the general awareness and appeal to broad consumers. It has flexible pricing plans: single-ride passes, full-day passes, and annual memberships. Those who purchase single-ride or full-day passes are referred to as casual riders while those who purchase annual memberships are Cyclistic members. 
 
-# My Role: In this scenario I am a junior data analyst at Cyclistic and my team has been tasked with the overall goal of designing marketing strategies 
+## My Role: In this scenario I am a junior data analyst at Cyclistic and my team has been tasked with the overall goal of designing marketing strategies 
 
 
-# Overall Goal: Design marketing strategies aimed at converting casual riders into annual members. That is the data analysis in this project shuold be confined to [conversion of casual members to members]
+## Overall Goal: Design marketing strategies aimed at converting casual riders into annual members. That is the data analysis in this project shuold be confined to [conversion of casual members to members]
 
 
-# Business Question: "Based on data such as numbers of riders, preffered bike type, preffered season, ride length, etc. how do members and casual riders use Cyclistic bikes? Secondly what steps the compnay should take to convert the casual riders to annual members?"
+## Business Question: "Based on data such as numbers of riders, preffered bike type, preffered season, ride length, etc. how do members and casual riders use Cyclistic bikes? Secondly what steps the compnay should take to convert the casual riders to annual members?"
 
 
 Below I will describe step-by-step the process I used to for this project. 
 
 
 
-# PROCESS:
+## PROCESS:
 [Overview]: I first analyzed the data separately (each month) in Excel, then used R to analyze the data as a whole (one year). Finally I created a dashboard to support design elements.
 
 I initially wanted to gather and analyze my data in [Excel] because it was the tool I was most familiar with and I could get a general understanding of the data quicker. But due to limitaions in excel spreadsheet, combining the 12 moths data(which sums about 5 million) was not possible. As such I went for [R Studio] where using [rbind] function the data of all 12 files were combined.
 However besides RStudio and Tableau, Excel was used for generating pivot table and other charts for analysis.
 
-# STEPS TAKEN:
+## STEPS TAKEN:
 I downloaded 12 months data from [divvy-tripdata](https://www.google.com) , and converted the .csv files into excel spreadsheets. However data in both csv and excel were kept for analysis purpose. The data was downloded from September 2023 to August 2024. 
 
 Added two columns namely ride_length and day_of_week to all of the months:
@@ -45,7 +45,7 @@ Calculated the day of the week for each trip using [weekday] function in start_a
 
 For every month in Excel created pivot tables and charts to go with the analysis.
 
-# R 
+## R 
 I tried to use SQL and Bigquery for preparing data for analysis, but I was comfortable with R programming. Below is my general process in R. My full code can be viewed in my [Github profile].
 
 Libraries used in R: tidyverse, lubridate, hms, data.table 
