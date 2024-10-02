@@ -137,6 +137,23 @@ I learned the basics of Tableau after enrolling in Coursera for Google Certifica
 
 With the help of Microsoft Excel and Tableau I created a Dashboard whose details are attached as Dashboard details
 
+# Recommended  Business Solution as Junior Data Analyst
+
+1. It was found during the analysis of data ,that on Wednesday Afternoon during Summer season ,there are maximum number of riders.The company may go for effective offers to the casual riders such as,
+
+   a) Free ride length or ride-time.
+   b)Introduce point systems based on riding length to the rider which can be utilized to avail free ride length.
+   c)Offering free gifts after completing a specified number of days.
+
+2. It has been noticed that at certain starting stations there are maximum number of casual members.So company should focus on those stations specifically to convert casual to annual members by taking steps like promoting new offers like free membership ,free ride length  for annual members at those stations making casual members aware of the benefit of becoming annual members.
+
+3. The company should also take notice that the existing member riders shouldnot leave their membership.This can be done by providing certain attractie benefits exclusively for member riders.
+
+4. The company should carry on survey among the casual riders for:
+    1)What are the factors which make them hesitate to be annual members.
+    2)In case the riders have other options for cycling,then the steps should be taken to make Cyclistic the most 
+   favourable choice by riders particularly the area where count of casual is higher. 
+
 
 
  
