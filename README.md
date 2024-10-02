@@ -54,7 +54,9 @@ Calculated the day of the week for each trip using [weekday] function in start_a
 
 ## Using R for processing of data
 
-I tried to use SQL and Bigquery for preparing data for analysis, but I was comfortable with R programming. Below is my general process in R. My full code can be viewed in my [Github profile].
+I tried to use SQL and Bigquery for preparing data for analysis, but I was comfortable with R programming, because during my learning at Coursera , the wonderful teachers made concepts easy to understand and further the online assignments helped  me to grasp the concept of R programming. I found R very user-friendly and easy to understand.
+
+Below is my general process in R. My full code can be viewed in my [Github profile].
 
 Libraries used in R: tidyverse, lubridate, hms, data.table 
 
@@ -82,7 +84,7 @@ Season - Spring, Summer, Winter or Fall
 
 Time of Day - Night, Morning, Afternoon or Evening
 
-Created a new data frame called [cyclistic_date] that would contain all craeted new columns 
+Created a new data frame called [cyclistic_date] that would contain all created new columns 
 
 ## Cleaning of data:
 Removed duplicate rows, rows with NA values (blank rows),
@@ -125,6 +127,8 @@ Day of the Month - ride length covered by both casual and member riders for each
 Month - ride length for each month covered by both casual and member riders
 
 Season - ride lengths for each season (spring,  summer, fall, winter) covered by both casual and member riders
+
+Top 5 popular
 
 # Use of Tableau 
 I learned the basics of Tableau after enrolling in Coursera for Google Certification Course. During the sessions of this course and with their awsome teaching skills, I became very confortable in Tableau and R. I used Tableau alongwith R for my final analysis of combined data on the basis of the charts made in Tableau. Its a wonderful tool for data analysis and interpretation
