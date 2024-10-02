@@ -5,7 +5,8 @@ Author - Mayank Vatsa
 This is my first respository.
 
 I am an Engineer and have done MBA also.I have basic knowledge of Python and R Programming.
-I have worked on data,in my previous company like TCI ,where I used to work on abnoramlities caused by truck-drivers during night like Night-Driving,Freewheeling,Overspeeding so that based on the analysis , appropriate graphs could be produced to warn drivers about abnormalities so that the accidents could be reduced decreasing the total maintenance cost of the trucks. 
+
+I have worked on data, in my previous company TCI a logistic company. There I used to work on abnoramlities in driving caused by truck-drivers specially during night like driving in night beyond prescribed norms, freewheeling, overspeeding, overstaying, etc. Based on the tarcking data, appropriate charts could be produced to filter out the drivers who did not abide by the laid norms for driving by the company. Accordingly the drivers were cautioned about these abnormalities so that not only accidents could be reduced but also improving the performance as well as decreasing the total maintenance cost of the trucks. 
 
 
 
