@@ -156,7 +156,7 @@ With the help of Microsoft Excel and Tableau I created a Dashboard whose details
     2)In case the riders have other options for cycling,then the steps should be taken to make Cyclistic the most 
    favourable choice by riders particularly in those areas where count of casuals is higher. 
 
-## Thank you for going through this description. 
+
 
 
  
