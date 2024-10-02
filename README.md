@@ -58,7 +58,7 @@ Calculated the day of the week for each trip using [weekday] function in start_a
 
 I tried to use SQL and Bigquery for preparing data for analysis, but I was comfortable with R programming, because during my learning at Coursera , the wonderful teachers made concepts easy to understand and further the online assignments helped  me to grasp the concept of R programming. I found R very user-friendly and easy to understand.
 
-Below is my general process in R. My full code can be viewed [here]( .
+Below is my general process in R. My full code can be viewed in [R Code file] of my project.
 
 Libraries used in R: tidyverse, lubridate, hms, data.table 
 
