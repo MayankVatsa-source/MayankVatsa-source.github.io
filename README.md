@@ -5,6 +5,7 @@ Author - Mayank Vatsa
 This is my first respository.
 
 I am an Engineer and have done MBA also.I have basic knowledge of Python and R Programming.
+I have worked on data,in my previous company like TCI ,where I used to work on abnoramlities caused by truck-drivers during night like Night-Driving,Freewheeling,Overspeeding so that based on the analysis , appropriate graphs could be produced to warn drivers about abnormalities so that the accidents could be reduced decreasing the total maintenance cost of the trucks. 
 
 
 
