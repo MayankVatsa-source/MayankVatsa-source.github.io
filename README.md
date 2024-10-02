@@ -23,12 +23,11 @@ Design marketing strategies aimed at converting casual riders into annual member
 
 
 ## Business Question:
-"Based on data such as numbers of riders, preffered bike type, preffered season, ride length, etc. how do members and casual riders use Cyclistic bikes? Secondly what steps the compnay should take to convert the casual riders to annual members?"
+1. Based on data such as numbers of riders, preffered bike type, preffered season, ride length, etc. how do members and casual riders use Cyclistic bikes? 
+2. Secondly what steps the compnay should take to convert the casual riders to annual members?
 
 
-Below I will describe step-by-step the process I used to for this project. 
-
-
+Below is step by step description of the process I did for this project. 
 
 ## PROCESS:
 [Overview]: I first analyzed the data separately (each month) in Excel, then used R to analyze the data as a whole (one year). Finally I created a dashboard to support design elements.
@@ -37,27 +36,25 @@ I initially wanted to gather and analyze my data in [Excel] because it was the t
 However besides RStudio and Tableau, Excel was used for generating pivot table and other charts for analysis.
 
 ## STEPS TAKEN:
-I downloaded 12 months data from [divvy-tripdata](https://www.google.com) , and converted the .csv files into excel spreadsheets. However data in both csv and excel were kept for analysis purpose. The data was downloded from September 2023 to August 2024. 
+1. I downloaded 12 months data from [divvy-tripdata](https://www.google.com) , and converted the .csv files into excel spreadsheets. However data in both csv and excel were kept for analysis purpose. The data was downloded from September 2023 to August 2024. 
 
-Added two columns namely ride_length and day_of_week to all of the months:
+2. Added two columns namely ride_length and day_of_week to all of the months:
 
 ride_length:
 Calculated the total ride length for each trip subtracting end_at and  start_at column.
 day_of_week:
 Calculated the day of the week for each trip using [weekday] function in start_at column. 
 
-For every month in Excel created pivot tables and charts to go with the analysis.
+3. For every month in Excel created pivot tables and charts to go with the analysis.
 
-## R 
+## Using R for processing of data
 I tried to use SQL and Bigquery for preparing data for analysis, but I was comfortable with R programming. Below is my general process in R. My full code can be viewed in my [Github profile].
 
 Libraries used in R: tidyverse, lubridate, hms, data.table 
 
 Uploaded all of the original data from the data source [divytrip](https://www.google.com)  into R using read_csv function to upload all individual csv files and save them in separate data frames. 
 
-Merged the 12 months of data together using rbind to create a one year view.
-
-Created a new data frame called cyclistic_date that would contain all of my new columns 
+Merged the 12 months of data together using  [rbind] to create a one year view.
 
 Created new columns for:
 
@@ -79,17 +76,20 @@ Season - Spring, Summer, Winter or Fall
 
 Time of Day - Night, Morning, Afternoon or Evening
 
-## Cleaning of data:removed duplicate rows, removed rows with NA values (blank rows),
-removed where ride_length is 0 or negative (ride_length should be a positive number),
-remove unnecessary columns  namely ride_id, start_station_id, end_station_id, start_lat, start_long, end_lat, end_lng.
+Created a new data frame called [cyclistic_date] that would contain all craeted new columns 
 
-Calculated Total Rides for:
+## Cleaning of data:
+Removed duplicate rows, rows with NA values (blank rows),
+removed columns where ride_length was 0 or negative (ride_length cannot be negative),
+removed unnecessary columns  namely ride_id, start_station_id, end_station_id, start_lat, start_long, end_lat, end_lng.
 
-Total number of rides
+Calculated total ride_length  for:
 
-Total number of rider types which is casual and member
+Total number of riders
 
-Types of Bike used classic vs docked vs electric
+Total number of casual riders and member riders
+
+Types of Bike used classic vs docked vs electric used in riding.
 
 
 Time of Day - separated by member type and total rides for each session of day (morning, afternoon, evening, night)
@@ -104,28 +104,26 @@ Season - separated by member type and total rides for each season (spring,  summ
 
 Calculated Average Ride Length for:
 
-Total average ride length
+Member and casual riders 
 
-Member type - casual riders vs. annual members 
+Type of Bike - used by riders and average ride length for each bike type
 
-Type of Bike - separated by member type and average ride length for each bike type
+Hour - spent  by riders and average ride length for each hour in a day
 
-Hour - separated by member type and average ride length for each hour in a day
+Time of Day - spent by riders and average ride length for each time of day (morning, afternoon, evening, night)
 
-Time of Day - separated by member type and average ride length for each time of day (morning, afternoon, evening, night)
+Day of the Week - day-wise rides by all riders and average ride length for each day of the week
 
-Day of the Week - separated by member type and average ride length for each day of the week
+Day of the Month - ride length covered by both casual and member riders for each day of the month
 
-Day of the Month - separated by member type and average ride length for each day of the month
+Month - ride length for each month covered by both casual and member riders
 
-Month - separated by member type and average ride length for each month
+Season - ride lengths for each season (spring,  summer, fall, winter) covered by both casual and member riders
 
-Season - separated by member type and average ride lengths for each season (spring,  summer, fall, winter)
+# Use of Tableau 
+I learned the basics of Tableau after enrolling in Coursera for Google Certification Course. During the sessions of this course and with their awsome teaching skills, I became very confortable in Tableau and R. I used Tableau alongwith R for my final analysis of combined data on the basis of the charts made in Tableau. Its a wonderful tool for data analysis and interpretation
 
-#Tableau 
-While I learned the basics of Tableau in the Google Course I wanted more practice with visualizing data
-
-#Creating Dashboard
+# Creating Dashboard
 
 With the help of Microsoft Excel and Tableau I created a Dashboard whose details are attached as Dashboard details
 
