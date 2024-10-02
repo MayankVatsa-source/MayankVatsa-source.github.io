@@ -6,7 +6,7 @@ library(lubridate) #dates
 library(hms) #time
 library(data.table) #exporting data frame
 
-#load original .csv files, a years worth of data from August 2020 to July 2021
+#load original .csv files, a years worth of data from Septembe 2023 to August 2024
 sep09_df <- read_csv("202309-divvy-tripdata.csv") 
 oct10_df <- read_csv("202310-divvy-tripdata.csv") 
 nov11_df <- read_csv("202311-divvy-tripdata.csv")
@@ -18,7 +18,7 @@ apr04_df <- read_csv("202404-divvy-tripdata.csv")
 may05_df <- read_csv("202405-divvy-tripdata.csv")
 jun06_df <- read_csv("202406-divvy-tripdata.csv") 
 jul07_df <- read_csv("202407-divvy-tripdata.csv") 
-aug07_df <- read_csv("202408-divvy-tripdata.csv") 
+aug08_df <- read_csv("202408-divvy-tripdata.csv") 
 
 #merge all of the data frames into one year view
 cyclistic_df <- rbind ( sep09_df, oct10_df, nov11_df, dec12_df, jan01_df, feb02_df, mar03_df, apr04_df, may05_df, jun06_df, jul07_df,aug08_df)
@@ -33,7 +33,7 @@ cyclistic_date <- cyclistic_df
 cyclistic_date$ride_length <- difftime(cyclistic_df$ended_at, cyclistic_df$started_at, units = "mins")
 
 #create columnds for: day of week, month, day, year, time, hour
-cyclistic_date$date <- as.Date(cyclistic_date$started_at) #default format is yyyy-mm-dd, use start date
+cyclistic_date$date <- as.Date(cyclistic_date$started_at) #use start date
 cyclistic_date$day_of_week <- wday(cyclistic_df$started_at) #calculate the day of the week 
 cyclistic_date$day_of_week <- format(as.Date(cyclistic_date$date), "%A") #create column for day of week
 cyclistic_date$month <- format(as.Date(cyclistic_date$date), "%m")#create column for month
@@ -327,19 +327,19 @@ cyclistic_date %>% group_by(rideable_type) %>%
 cyclistic_date %>% group_by(hour, member_casual) %>% 
   summarise_at(vars(ride_length),
                list(time = mean)) %>% 
-  print(n=48) #lets you view entire tibble
+  print(n=48) #to view entire tibble
 
 #average ride_length
 cyclistic_date %>% group_by(hour) %>% 
   summarise_at(vars(ride_length),
                list(time = mean)) %>% 
-  print(n=24) #lets you view entire tibble
+  print(n=24) #for entire tibble
 
 #--------------------TIME OF DAY---------------------
 
 #----morning----
 
-#average ride length by member type
+#average ride length by member and casual
 cyclistic_date %>% 
   group_by(member_casual) %>% 
   filter(time_of_day == "Morning") %>% 
