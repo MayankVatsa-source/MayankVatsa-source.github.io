@@ -31,7 +31,8 @@ Design marketing strategies aimed at converting casual riders into annual member
 Below is step by step description of the process I did for this project. 
 
 ## PROCESS:
-[Overview]: I first analyzed the data separately (each month) in Excel, then used R to analyze the data as a whole (one year). Finally I created a dashboard to support design elements.
+[Overview]:
+I first analyzed the data separately (each month) in Excel, then used R to analyze the data as a whole (one year). Finally I created a dashboard to support design elements.
 
 I initially wanted to gather and analyze my data in [Excel] because it was the tool I was most familiar with and I could get a general understanding of the data quicker. But due to limitaions in excel spreadsheet, combining the 12 moths data(which sums about 5 million) was not possible. As such I went for [R Studio] where using [rbind] function the data of all 12 files were combined.
 However besides RStudio and Tableau, Excel was used for generating pivot table and other charts for analysis.
