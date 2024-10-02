@@ -128,7 +128,7 @@ Month - ride length for each month covered by both casual and member riders
 
 Season - ride lengths for each season (spring,  summer, fall, winter) covered by both casual and member riders
 
-Top 5 popular
+Starting Station Names- Top 5 Starting Station Names with maximum number of casual riders.This was important for taking steps for converting maximum number of casual riders to member riders.
 
 # Use of Tableau 
 I learned the basics of Tableau after enrolling in Coursera for Google Certification Course. During the sessions of this course and with their awsome teaching skills, I became very confortable in Tableau and R. I used Tableau alongwith R for my final analysis of combined data on the basis of the charts made in Tableau. Its a wonderful tool for data analysis and interpretation
@@ -136,6 +136,8 @@ I learned the basics of Tableau after enrolling in Coursera for Google Certifica
 # Creating Dashboard
 
 With the help of Microsoft Excel and Tableau I created a Dashboard whose details are attached as Dashboard details
+
+
 
  
 
