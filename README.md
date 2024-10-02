@@ -43,13 +43,17 @@ However besides RStudio and Tableau, Excel was used for generating pivot table a
 2. Added two columns namely ride_length and day_of_week to all of the months:
 
 ride_length:
+
 Calculated the total ride length for each trip subtracting end_at and  start_at column.
+
 day_of_week:
+
 Calculated the day of the week for each trip using [weekday] function in start_at column. 
 
 3. For every month in Excel created pivot tables and charts to go with the analysis.
 
 ## Using R for processing of data
+
 I tried to use SQL and Bigquery for preparing data for analysis, but I was comfortable with R programming. Below is my general process in R. My full code can be viewed in my [Github profile].
 
 Libraries used in R: tidyverse, lubridate, hms, data.table 
