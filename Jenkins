@@ -1,0 +1,25 @@
+pipeline {
+    agent any // Runs on your Windows host
+    
+    stages {
+        stage('Pull Code') {
+            steps {
+                checkout scm // Grabs your code from GitHub
+            }
+        }
+        stage('Build & Run') {
+            steps {
+                script {
+                    // This command uses the Docker plugin to run your code
+                    // inside a containerized environment
+                    docker.withServer('tcp://127.0.0.1:2375') {
+                        docker.image('python:3.9-slim').inside {
+                            sh 'python --version'
+                            sh 'pip install -r requirements.txt'
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
