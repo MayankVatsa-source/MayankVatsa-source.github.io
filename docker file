@@ -1,0 +1,17 @@
+# 1. Use an official R base image
+FROM rocker/r-ver:4.3.0
+
+# 2. Install system dependencies for R packages (like xml2 or ssl)
+RUN apt-get update && apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
+
+# 3. Set the working directory
+WORKDIR /app
+
+# 4. Copy your R script and any data files from GitHub to the container
+COPY . .
+
+# 5. Install the R packages your code needs
+RUN R -e "install.packages(c('tidyverse', 'caret'), repos='https://cloud.r-project.org/')"
+
+# 6. Run your R script
+CMD ["Rscript", "your_script.R"]
